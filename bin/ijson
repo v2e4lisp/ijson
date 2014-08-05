@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Ijson.load ARGV.first
+ARGV.clear
+Ijson.start
