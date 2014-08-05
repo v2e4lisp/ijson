@@ -1,11 +1,11 @@
 class Hash
-  include Command
-  include Literal
-  include BeAwesome
+  include Ijson::Command
+  include Ijson::Literal
+  include Ijson::BeAwesome
 end
 
 class Array
-  include Command
-  include Literal
-  include BeAwesome
+  include Ijson::Command
+  include Ijson::Literal
+  include Ijson::BeAwesome
 end

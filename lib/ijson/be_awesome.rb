@@ -1,5 +1,3 @@
-require "awesome_print"
-
 # Fix indent
 AwesomePrint.defaults = {:indent => -2}
 

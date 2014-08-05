@@ -2,7 +2,7 @@ module Ijson
   module Command
     def self.included(base)
       base.send(:include, Hash) if base == ::Hash
-      base.send(:include, Hash) if base == ::Array
+      base.send(:include, Array) if base == ::Array
     end
 
     def self.use_binding_of env
@@ -16,13 +16,13 @@ module Ijson
 
     module Hash
       def ls(value=nil)
-        value ? value.ls : keys
+        value ? self[value].ls : self.keys
       end
     end
 
     module Array
       def ls(value=nil)
-        value ? value.ls : (0...size).to_a
+        value ? self[value].ls : (0...size).to_a
       end
     end
 

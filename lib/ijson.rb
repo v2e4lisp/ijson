@@ -5,6 +5,8 @@ require "awesome_print"
 require "ijson/version"
 require "ijson/literal"
 require "ijson/be_awesome"
+require "ijson/command"
+require "ijson/ext"
 
 module Ijson
   module_function
@@ -14,7 +16,6 @@ module Ijson
   end
 
   def start
-    require "ijson/ext"
     Ripl.start
   end
 end
